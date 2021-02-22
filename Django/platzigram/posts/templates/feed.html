@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Platzigram</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+<script async src='/cdn-cgi/bm/cv/669835187/api.js'></script></head>
+<body>
+    <br><br>
+    <div class="container">
+        <div class="row">
+            {% for post in posts %}
+            <div class="col-lg-4 offset-lg-4">
+                <div class="media">
+                    <img class="mr-3 rounded-circle" src="{{ post.user.picture }}" alt="{{ post.user.name }}">
+                    <div class="media-body">
+                        <h5 class="mt-0">{{ post.user.name }}</h5>
+                        {{ post.timestamp }}
+                    </div>
+                </div>
+                <img class="img-fluid mt-3 border rounded" src="{{ post.photo }}" alt="{{ post.title }}">
+                <h6 class="ml-1 mt-1">{{ post.title }}</h6>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+<script type="text/javascript">(function(){window['__CF$cv$params']={r:'622a6a8ceaafb546',m:'b54f338b7ec3d6babdb724c7cad6343484bf5748-1613511513-1800-AYpNgJsnBuaaV2Nt/anuYk98wFT0PTgWsqP1MAlKybNdSmgClp20zQ1nNn7+STFuyb0p8MRFFJp949LUKdXSlROBcCW7G87AgRlfdkZrQo/JSB5L6j1zavQ05AfShnSceB7oTAmPBo5tv36H/0d+9y8qohpOa7gNSHJnDHWhYwZ5aXR4k7JIAwjAXhKba4tslGXAJXd/jUETiVIsRn7C3FZmpKdhR+t9Osma1zI4RTbA1sIFkTQr2mETH3KZ1Y2gPw==',s:[0xf1bf3c4c1c,0xc4d7b53cfa],}})();</script></body>
+</html>
